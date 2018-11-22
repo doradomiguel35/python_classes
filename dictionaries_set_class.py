@@ -2,47 +2,57 @@ class math_opt_dict:
 	def __init__(self,dict):
 		self.dict = dict
 
-	def dict_Add_Values(dict):
+	def dict_add_values(self):
 		result = 0
-		for x in dict.values():
+		for x in self.dict.values():
 			result += x
 		return result
 
-	def dict_Sub_Values(dict):
-		result = max(dict.values())
-		for x in dict.values():
+	def dict_sub_values(self):
+		result = max(self.dict.values())
+		for x in self.dict.values():
 			result -= x
 		return result
 
-
-	def dict_Multiply_Values(dict):
+	def dict_multiply_values(self):
 		result = 1
-		for x in dict.values():
+		for x in self.dict.values():
 			result *= x
 		return result
 
-	def dict_Divide_Values(dict):
+	def dict_divide_values(self):
 		result = 1
-		for x in dict.values():
+		for x in self.dict.values():
 			result /= x
 		return result
 
-# def dict_Search(dict,search):
-# 	if search in dict:
-# 		return str(dict[search])+" is present"
-# 	return None
+class dictionary_CRUD:
+	def __init__(self,search,
+			key_add,key_add_value,
+			key_update,key_update_value,
+			key_remove,dict):
+		self.search = search
+		self.keyUpdate = keyUpdate
+		self.keyValue = keyValue
+		self.keyRemove = keyRemove
+		self.dict = dict
 
-# def dict_Add(dict,key,value):
-# 	dict[key] = value
-# 	return dict
+	def dict_Add(self):
+		dict[self.key_add_value] = self.key_add_value
+		return dict
 
-# def dict_Update(dict,key,value):
-# 	dict[key] = value
-# 	return dict
+	def dict_Search(self):
+		if self.search in self.dict:
+			return str(dict[self.search])+" is present"
+		return None
 
-# def dict_Remove(dict,key):
-# 	dict.pop(key)
-# 	return dict
+	def dict_Update(dict,key,value):
+		dict[key] = value
+		return dict
+
+	def dict_Remove(dict,key):
+		dict.pop(key)
+		return dict
 
 # def dict_Assign(list1,list2):
 # 	dictionary = dict() 

@@ -1,9 +1,4 @@
-from boolean_class import boolean_compare
-from boolean_class import verify_data_type
-from boolean_class import list_pure_type
-from boolean_class import odd_even_verify
-from boolean_class import triangle_verify
-from boolean_class import input_verify
+from classes.boolean_class import boolean_compare,verify_data_type,list_pure_type,odd_even_verify,triangle_verify,input_verify
 
 compare = boolean_compare(12,4)
 print(compare.bool_less())

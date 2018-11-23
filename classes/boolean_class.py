@@ -115,7 +115,7 @@ class list_pure_type:
 				break
 		return result
 
-class odd_even:
+class odd_even_verify:
 	def __init__(self,num):
 		self.num = num
 

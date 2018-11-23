@@ -1,15 +1,20 @@
-from classes.boolean_class import boolean_compare,verify_data_type,list_pure_type,odd_even_verify,triangle_verify,input_verify
+from classes.boolean_compare_class import boolean_compare
+from classes.verify_data_type_class import verify_data_type   
+from classes.list_pure_type_class import list_pure_type
+from classes.odd_even_verify_class import odd_even_verify
+from classes.triangle_verify_class import triangle_verify
+from classes.input_verify_class import input_verify
 
-compare = boolean_compare(12,4)
-print(compare.bool_less())
-print(compare.bool_greater())
-print(compare.bool_equal())
+compare = boolean_compare()
+print(compare.bool_less(12,4))
+print(compare.bool_greater(12,4))
+print(compare.bool_equal(12,4))
 
-verify = verify_data_type(5,'6',(7,8,9),{'index': 1},False)
-print(verify.bool_int())
-print(verify.bool_float())
-print(verify.bool_str())
-print(verify.bool_boolean_verify())
+verify = verify_data_type([12,4],{4,5},{'int': 4},(5,6))
+print(verify.bool_int(4))
+print(verify.bool_float(4.6))
+print(verify.bool_str("Hi"))
+print(verify.bool_boolean_verify(False))
 print(verify.bool_list_verify())
 print(verify.bool_set_verify())
 print(verify.bool_tuple_verify())

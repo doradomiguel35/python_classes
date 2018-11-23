@@ -1,18 +1,33 @@
-from dictionaries_set_class import math_opt_dict
-from dictionaries_set_class import dictionary_CRUD
+from classes.dictionaries_set_class import math_opt_dict,dictionary_CRUD,set_operations,set_assign
 
+crud_dict = {'first_name': 'Miguel',
+			'last_name': 'Dorado',
+			'home_town':'Davao City'}
 
-operation = math_opt_dict({'num1': 1,'num2':3})
+sets = {"banana","apple","pineapple","strawberry",35,25,45,140}
+
+operation = math_opt_dict({'num1': 56,'num2':2})
 print(operation.dict_add_values())
 print(operation.dict_sub_values())
 print(operation.dict_multiply_values())
 print(operation.dict_divide_values())
 
-lists = {'first_name': 'Miguel',
-		'last_name': 'Dorado',
-		'home_town':'Davao City'}
+crud = dictionary_CRUD(crud_dict)
+print(crud.dict_add('age',12,))
+print(crud.dict_search('first_name'))
+print(crud.dict_update('home_town','Manila City'))
+print(crud.dict_remove('home_town'))
+print(crud.dict_assign(['mother','father'],['Arlyn Dorado','Castor Dorado']))
+print(crud.dict_concat_value('first_name','last_name'))
 
-crud = dictionary_CRUD('first_name','age',12,'home_town','Davao City','home_town',lists)
-print(crud.dict_)
+set_op = set_operations(sets)
+print(set_op.set_add_item('raspberry'))
+print(set_op.set_remove_item('banana'))
+print(set_op.set_get_length())
+print(set_op.set_max_value())
+print(set_op.set_identify_type('strawberry'))
 
-
+set_assign = set_assign(sets)
+print(set_assign.set_assign_to_dict('apple',25))
+print(set_assign.set_assign_to_list_of_dict('strawberry',140))
+print(set_assign.set_assign_to_tuple_of_dict('pineapple',45))

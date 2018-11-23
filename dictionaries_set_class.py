@@ -30,29 +30,32 @@ class dictionary_CRUD:
 	def __init__(self,search,
 			key_add,key_add_value,
 			key_update,key_update_value,
-			key_remove,dict):
+			key_remove,dictionary):
 		self.search = search
-		self.keyUpdate = keyUpdate
-		self.keyValue = keyValue
-		self.keyRemove = keyRemove
-		self.dict = dict
+		self.key_add = key_add
+		self.key_add_value = key_add_value
+		self.key_update = key_update
+		self.key_update_value = key_update_value
+		self.key_remove = key_remove
+		self.dictionary = dictionary
 
-	def dict_Add(self):
-		dict[self.key_add_value] = self.key_add_value
-		return dict
+	def dict_add(self):
+		self.dictionary[self.key_add_value] = self.key_add_value
+		return self.dictionary
 
-	def dict_Search(self):
-		if self.search in self.dict:
-			return str(dict[self.search])+" is present"
-		return None
+	def dict_search(self):
+		if self.search in self.dictionary:
+			return str(self.dictionary[self.search])+" is present"
+		else:
+			return None
 
-	def dict_Update(dict,key,value):
-		dict[key] = value
-		return dict
+	def dict_update(self):
+		self.dictionary[self.key_update] = self.key_update_value
+		return self.dictionary
 
-	def dict_Remove(dict,key):
-		dict.pop(key)
-		return dict
+	def dict.remove(self):
+		self.dictionary.pop(self.key_remove)
+		return self.dictionary
 
 # def dict_Assign(list1,list2):
 # 	dictionary = dict() 

@@ -1,4 +1,7 @@
-from classes.dictionaries_set_class import math_opt_dict,dictionary_CRUD,set_operations,set_assign
+from classes.math_opt_dict_class import math_opt_dict
+from classes.dictionary_crud_class import dictionary_crud
+from classes.set_operations_class import set_operations
+from classes.set_assign_class import set_assign
 
 crud_dict = {'first_name': 'Miguel',
 			'last_name': 'Dorado',
@@ -12,7 +15,7 @@ print(operation.dict_sub_values())
 print(operation.dict_multiply_values())
 print(operation.dict_divide_values())
 
-crud = dictionary_CRUD(crud_dict)
+crud = dictionary_crud(crud_dict)
 print(crud.dict_add('age',12,))
 print(crud.dict_search('first_name'))
 print(crud.dict_update('home_town','Manila City'))

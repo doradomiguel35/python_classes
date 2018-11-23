@@ -15,7 +15,7 @@ class boolean_compare:
 			return True
 		else:
 			return False
-		s
+		
 	def bool_equal(self):
 		if self.num1 == self.num2:
 			return True
